@@ -1,0 +1,26 @@
+#
+# 组件结构
+# key 为目录或文件名
+# 值为字符串时，key 表示文件名，值作为文件内容写入
+# 值为 object 或 array 时，key 表示目录名，数组元素
+# 做为文件名，object 将被递归处理
+# 
+# 转换代码见：../lib/touchp.js
+#
+# .gitkeep 文件是为了让 git 将目录加入版本库(git 不会追踪空目录)
+#
+index.js: ''
+README.md: ''
+CHANGELOG.md: ''
+package.json: '{"main": "dist/index.js", "license": "MIT"}'
+src:
+  scss:
+    - index.scss
+  js:
+    - .gitkeep
+  img:
+    - .gitkeep
+  font:
+    - .gitkeep
+demo:
+  - .gitkeep
