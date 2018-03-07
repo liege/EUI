@@ -12,19 +12,25 @@ const yaml = require('yamljs');
 
 const touchp = require('../lib/touchp');
 
-module.exports = function(name, cmd) {
+// 参数检查
+function checkArgs(args) {
+  return typeof args === 'string' && !!args;
+}
+
+module.exports = function(name, label, cmd) {
   // 参数不对，显示帮助信息
-  if (typeof name !== 'string' || !name) {
+  if (!checkArgs(name) || !checkArgs(label)) {
+    console.log('组件名和中文名不能为空！'.red);
+
     return execSync('yarn component -h', {
       stdio: [1, 1, 1]
     });
   }
 
-  // 组件文件夹
-  const COMPONENTS_FOLDER = path.resolve(process.cwd(), './packages');
-
   // 待创建的组件根目录
-  const COMPONENT_ROOT = path.resolve(COMPONENTS_FOLDER, name);
+  const COMPONENT_ROOT = path.resolve(path.resolve(
+    process.cwd(), './packages'
+  ), name);
 
   // 检查是否存在同名组件
   if (fs.existsSync(COMPONENT_ROOT)) {
@@ -32,12 +38,15 @@ module.exports = function(name, cmd) {
   }
 
   // 组件结构
-  const COMPONENT_STRUCTURE = yaml.parse(fs.readFileSync(
+  let component_structure = yaml.parse(fs.readFileSync(
     path.resolve(__dirname, './component.yaml'), 'utf8'
   ));
 
+  // 将组件中文名放入 README.md
+  component_structure['README.md'] = `# ${label}\n\n\n`;
+
   // 创建组件目录及文件
-  touchp(COMPONENT_STRUCTURE, COMPONENT_ROOT);
+  touchp(component_structure, COMPONENT_ROOT);
 
   // 初始化包
   execSync(`cd ${COMPONENT_ROOT} && yarn init`, {

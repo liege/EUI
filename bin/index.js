@@ -8,6 +8,7 @@ commander.usage('使用 yarn command -h 查看命令详细介绍，如：yarn co
 commander.command('component')
   .description('添加新组件')
   .option('-n, --name <component name>', '组件名称')
+  .option('-l, --label <component label>', '组件中文名')
   .action(require('./cmd/component'));
 
 // 解析命令行参数
