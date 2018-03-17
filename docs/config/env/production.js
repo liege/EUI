@@ -11,6 +11,7 @@
  */
 
 module.exports = {
+  port: 6802
 
   /***************************************************************************
    * Set the default database connection for models in the production        *

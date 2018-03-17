@@ -19,6 +19,9 @@
  * For more information on configuring custom routes, check out:
  * http://sailsjs.org/#!/documentation/concepts/Routes/RouteTargetSyntax.html
  */
+const walk = require('walk-sync');
+const path = require('path');
+const fs = require('fs');
 
 module.exports.routes = {
 
@@ -32,8 +35,34 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': {
-    view: 'homepage'
+  '/*': {
+    fn: function (req, res) {
+      const packagesPath = path.resolve(
+        sails.config.appPath, '../packages'
+      );
+      const packages = walk(packagesPath, {
+        directories: false,
+        globs: ['*/README.md']
+      }).map(function(it) {
+        return path.resolve(packagesPath, it);
+      });
+
+      async.map(packages, fs.readFile, function(err, content) {
+        return res.view(process.env.NODE_ENV, {
+          packages: content.map(function(it) {
+            it = ((
+              it.toString().split(/[\n\r]+/g
+            ) || [])[0] || '').replace(/#\s+/gi, '').split(/\s+/) || [];
+
+            return {
+              name: it[0],
+              label: it[1]
+            };
+          })
+        });
+      });
+
+    }
   }
 
   /***************************************************************************

@@ -43,7 +43,7 @@ module.exports = function(name, label, cmd) {
   ));
 
   // 将组件中文名放入 README.md
-  component_structure['README.md'] = `# ${label}\n\n\n`;
+  component_structure['README.md'] = `# ${name} ${label}\n\n\n`;
 
   // 创建组件目录及文件
   touchp(component_structure, COMPONENT_ROOT);

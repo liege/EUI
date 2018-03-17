@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EUI</title>
+  </head>
+
+  <body>
+    <div id="react-root"></div>
+    <script>
+      var PACKAGES = (
+        new Function('return {{packages|json|safe}}')
+      )();
+    </script>
+
+    <script src="/assets/dll.js"></script>
+    <!-- DEVELOPMENT_ASSETS_START -->
+    <script src="/app.js"></script>
+    <!-- DEVELOPMENT_ASSETS_END -->
+  </body>
+</html>
