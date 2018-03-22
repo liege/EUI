@@ -11,6 +11,13 @@ commander.command('component')
   .option('-l, --label <component label>', '组件中文名')
   .action(require('./cmd/component'));
 
+// 添加依赖
+commander.command('dependencies')
+  .description('添加依赖')
+  .option('-n --name <component name>', '组件名称')
+  .option('-v --version <component version>', '组件版本')
+  .action(require('./cmd/dependencies'));
+
 // 解析命令行参数
 commander.parse(process.argv);
 if (!commander.args.length) {

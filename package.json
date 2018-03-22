@@ -13,6 +13,7 @@
     "mkdirp": "^0.5.1",
     "optimize-css-assets-webpack-plugin": "^4.0.0",
     "postcss-loader": "^2.1.1",
+    "pretty-js": "^0.2.0",
     "scss-loader": "^0.0.1",
     "url-loader": "^1.0.1",
     "walk-sync": "^0.3.2",
@@ -25,6 +26,7 @@
     "start": "cd docs/build && node dev.js",
     "build": "cd docs/build && node build.js",
     "detail": "node ./bin/index.js",
-    "component": "node ./bin/index.js component"
+    "component": "node ./bin/index.js component",
+    "c": "node ./bin/index.js component"
   }
 }

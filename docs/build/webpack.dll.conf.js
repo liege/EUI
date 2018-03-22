@@ -16,7 +16,8 @@ module.exports = {
       'js-cookie',
       'zeroclipboard',
       'moment',
-      'es6-promise'
+      'es6-promise',
+      'react-loadable'
     ]
   },
 

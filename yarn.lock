@@ -378,6 +378,14 @@ compare-func@^1.3.1:
     array-ify "^1.0.0"
     dot-prop "^3.0.0"
 
+complexion-js@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/complexion-js/-/complexion-js-0.2.0.tgz#eb2f81ed7bac7bf151947a48c184af959d4dda4e"
+
+complexion@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/complexion/-/complexion-0.2.0.tgz#36ae9d8a60db126f940876ef1f963e33ddbaf851"
+
 concat-map@0.0.1:
   version "0.0.1"
   resolved "http://npm.zhinanzhen.ai/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
@@ -1583,6 +1591,10 @@ optimize-css-assets-webpack-plugin@^4.0.0:
     cssnano "^3.4.0"
     last-call-webpack-plugin "^3.0.0"
 
+option-parser@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/option-parser/-/option-parser-1.0.0.tgz#9d470f969b7cb0cd2bb5b75e998be9961ba57206"
+
 os-homedir@^1.0.1:
   version "1.0.2"
   resolved "http://npm.zhinanzhen.ai/os-homedir/-/os-homedir-1.0.2.tgz#ffbc4988336e0e833de0c168c7ef152121aa7fb3"
@@ -1966,9 +1978,22 @@ prepend-http@^1.0.0, prepend-http@^1.0.1:
   version "1.0.4"
   resolved "http://npm.zhinanzhen.ai/prepend-http/-/prepend-http-1.0.4.tgz#d4f4562b0ce3696e41ac52d0e002e57a635dc6dc"
 
+pretty-js@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/pretty-js/-/pretty-js-0.2.0.tgz#a30a868acab8bbfe7f8ca28d4c46cf5fe96c95d7"
+  dependencies:
+    complexion "^0.2.0"
+    complexion-js "^0.2.0"
+    option-parser "^1.0.0"
+    process-files "^1.0.0"
+
 private@~0.1.5:
   version "0.1.8"
   resolved "http://npm.zhinanzhen.ai/private/-/private-0.1.8.tgz#2381edb3689f7a53d653190060fcf822d2f368ff"
+
+process-files@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/process-files/-/process-files-1.0.0.tgz#2d1ab8487675221841aa2bfdf22085614d588f23"
 
 process-nextick-args@~2.0.0:
   version "2.0.0"

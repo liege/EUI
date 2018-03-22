@@ -12,7 +12,7 @@
 index.js: ''
 README.md: ''
 CHANGELOG.md: ''
-package.json: '{"main": "dist/index.js", "license": "MIT"}'
+package.json: '{"main": "dist/index.js", "license": "MIT", "devDependencies":{}}'
 src:
   scss:
     - index.scss

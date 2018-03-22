@@ -1,7 +1,15 @@
-import React, { Component } from 'react';
+import style from '../scss/index.scss';
 
+import React, { Component } from 'react';
+import { upperFirst } from 'lodash';
 import { Layout, Menu, Icon } from 'antd';
+import { Link, Route, Switch, NavLink } from 'react-router-dom';
 const { Header, Content, Footer, Sider } = Layout;
+
+
+import NotFound from './notfound';
+import EuiComponent from './component.js';
+import Main from './main.js';
 
 export default () => {
   return (
@@ -14,58 +22,90 @@ export default () => {
           left: 0
         }}
       >
-        <div className="logo" />
+        <div
+          className={style.logo}
+        >
+          <Link to="/">EUI</Link>
+        </div>
+
         <Menu
           theme="dark"
           mode="inline"
+          defaultOpenKeys={['components']}
         >
+          <Menu.Item
+          >
+            <NavLink
+              to="/"
+              exact
+              activeClassName="ant-menu-item-selected"
+            >
+              <span
+                className={style['nav-text']}
+              >
+                首页
+              </span>
+            </NavLink>
+          </Menu.Item>
+
+          <Menu.SubMenu
+            title="组件"
+            key="components"
+          >
           {
             window.PACKAGES.map((it) => {
               return (
-                <Menu.Item key="{it.name}">
-                  <Icon type="user" />
-                  <span className="nav-text">
-                    {it.name}
-                    &nbsp;
-                    {it.label}
-                  </span>
+                <Menu.Item
+                  key={it.name}
+                >
+                  <NavLink
+                    to={`/component/${it.name}`}
+                    activeClassName="ant-menu-item-selected"
+                  >
+                    <span
+                      className={style['nav-text']}
+                    >
+                      {upperFirst(it.name)}
+                      <span
+                        className={style['component']}
+                      >
+                        {it.label}
+                      </span>
+                    </span>
+                  </NavLink>
                 </Menu.Item>
               );
             })
           }
+          </Menu.SubMenu>
         </Menu>
       </Sider>
 
       <Layout
         style={{
-          marginLeft: 200
+          marginLeft: 200,
+          background: '#fff'
         }}
       >
-        <Header
-          style={{
-            background: '#fff',
-            padding: 0
-          }}
-        />
-        <Content
-          style={{
-            margin: '24px 16px 0', 
-            overflow: 'initial'
-          }}
-        >
-          <div style={{ padding: 24, background: '#fff', textAlign: 'center' }}>
-            ...
-          <br />
-            Really
-            <br />...<br />...<br />...<br />
-            <br />...<br />...<br />...<br />...<br />...<br />...
-            <br />...<br />...<br />...<br />...<br />...<br />...
-            <br />...<br />...<br />...<br />...<br />...<br />...
-            <br />...<br />...<br />...<br />...<br />...<br />...
-            <br />...<br />...<br />...<br />...<br />...<br />...
-            <br />...<br />...<br />...<br />...<br />...<br />...
-            <br />...<br />...<br />...<br />...<br />...<br />
-            content
+        <Content>
+          <div className={style['content-wrap']}>
+            <Switch>
+              <Route
+                path="/"
+                exact
+                component={Main}
+              />
+
+              <Route
+                path="/component/:component"
+                exact
+                component={EuiComponent}
+              />
+
+              <Route
+                component={NotFound}
+              />
+            </Switch>
           </div>
         </Content>
       </Layout>

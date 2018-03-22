@@ -14,7 +14,7 @@
       }
     ],
     "transform-proto-to-assign",
-    [
+    "syntax-dynamic-import", [
       "import", {
         "libraryName": "antd",
         "style": true

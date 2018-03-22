@@ -67,8 +67,5 @@ exports.styleLoaders = function (options) {
       use: loader
     });
   }
-  console.log(
-    JSON.stringify(output[2])
-  );
   return output;
 }

@@ -34,7 +34,6 @@ module.exports.routes = {
   * `assets` directory)                                                      *
   *                                                                          *
   ***************************************************************************/
-
   '/*': {
     fn: function (req, res) {
       const packagesPath = path.resolve(

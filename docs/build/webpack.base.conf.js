@@ -27,6 +27,10 @@ function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
+const PATH_ALIAS = {
+  '@packages': path.resolve(__dirname, '../../packages')
+};
+
 module.exports = {
   entry: {
     app: path.resolve(
@@ -41,10 +45,27 @@ module.exports = {
       : config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.json', '.scss']
+    extensions: ['.js', '.jsx', '.json'],
+    alias: PATH_ALIAS
+  },
+  resolveLoader: {
+    alias: {
+      'markdown-loader': path.resolve(
+        __dirname, './loaders/markdown-loader.js'
+      )
+    } 
   },
   module: {
     rules: [
+      {
+        test: /\.md$/,
+        loader: 'markdown-loader',
+        enforce: 'pre',
+        options: {
+          alias: PATH_ALIAS
+        },
+        exclude: /node_modules/
+      },
       {
         test: /\.scss$/,
         use: [
