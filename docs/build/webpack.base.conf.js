@@ -58,7 +58,14 @@ module.exports = {
   module: {
     rules: [
       // {
-      //   test: /\.md$/,
+      //   test: /\.jsx?$/,
+      //   exclude: /node_modules/,
+      //   use: [
+      //     'babel-loader?presets[]=react,presets[]=es2015'
+      //   ]
+      // },
+      // {
+      //   test: /\README.md$/,
       //   loader: 'markdown-loader',
       //   // loaders: ['react-hot', 'babel-loader?presets[]=react,presets[]=es2015', 'markdown-loader'],
       //   // enforce: 'pre',
@@ -67,11 +74,25 @@ module.exports = {
       //   },
       //   exclude: /node_modules/
       // },
+      // {
+      //   test: /\.md$/,
+      //   use: [
+      //     'babel-loader',
+      //     'markdown-loader'
+      //   ]
+      // },
+      // {
+      //   test: /\.md$/, // 可用
+      //   use: [
+      //     'babel-loader',
+      //     'react-markdown-loader'
+      //   ]
+      // },
       {
-        test: /\.mdx?$/,
+        test: /\.md$/,
         use: [
           'babel-loader',
-          'mdx-loader',
+          'react-markdown-it-loader'
         ]
       },
       {

@@ -23,3 +23,17 @@ loading|设置按钮载入状态，注意：该属性只在 tag 为 button 时�
 onClick|click 事件的 handler|Function|-
 className|自定义按钮类名|String|-
 fixedWidth|固定按钮宽度，fixedWidth的值就是按钮的宽度|Number|-
+
+
+---
+imports:
+  Button: './examples/index.js'
+---
+
+
+```render html
+<Button type="primary">Primary</Button>
+<Button>Default</Button>
+<Button type="dashed">Dashed</Button>
+<Button type="danger">Danger</Button>
+```

@@ -3,6 +3,8 @@ const anchor = require('markdown-it-anchor');
 const frontMatter = require('front-matter');
 const highlight = require('highlight.js');
 const slugify = require('transliteration').slugify;
+require("babel-register");
+let babel = require('babel-core');
 
 let md = require('markdown-it');
 
@@ -76,6 +78,13 @@ const formatModule = (imports, js, jsx) => {
 
     export default MarkdownItReactComponent;`;
 
+    // var es5Code = require('babel-core')
+    //     .transform(moduleText, {
+    //         presets: ['es2015']
+    //     })
+    //     .code;
+    console.log('========>', moduleText)
+
     return moduleText;
 };
 
@@ -114,7 +123,7 @@ module.exports = function (source) {
 
     const {body, attributes: {imports: importMap}} = frontMatter(source);
 
-    const imports = 'import React, { Component } from \'react\'; ' + importMap;
+    const imports = 'import React, { Component } from \'react\'; import { render } from \'react-dom\';' + importMap;
     // return 'export default "asas"';
     let moduleJS = [];
 
@@ -168,6 +177,8 @@ module.exports = function (source) {
         .replace(/<hr>/g, '<hr />')
         .replace(/<br>/g, '<br />')
         .replace(/class=/g, 'className=');
-    console.log('-------------->', formatModule(imports, moduleJS.join('\n'), content))
+    console.log('imports-------------->', imports)
+    console.log('moduleJS.join-------------->',  moduleJS.join('\n'))
+    console.log('content-------------->', content)
     return formatModule(imports, moduleJS.join('\n'), content);
 };
