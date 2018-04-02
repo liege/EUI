@@ -5,5 +5,5 @@
 
 module.exports = {
   // 开发环境端口
-  port: 1589
+  port: 30000
 };

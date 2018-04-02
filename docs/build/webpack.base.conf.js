@@ -51,20 +51,28 @@ module.exports = {
   resolveLoader: {
     alias: {
       'markdown-loader': path.resolve(
-        __dirname, './loaders/markdown-loader.js'
+        __dirname, './loaders/markdown.js'
       )
     } 
   },
   module: {
     rules: [
+      // {
+      //   test: /\.md$/,
+      //   loader: 'markdown-loader',
+      //   // loaders: ['react-hot', 'babel-loader?presets[]=react,presets[]=es2015', 'markdown-loader'],
+      //   // enforce: 'pre',
+      //   options: {
+      //     alias: PATH_ALIAS
+      //   },
+      //   exclude: /node_modules/
+      // },
       {
-        test: /\.md$/,
-        loader: 'markdown-loader',
-        enforce: 'pre',
-        options: {
-          alias: PATH_ALIAS
-        },
-        exclude: /node_modules/
+        test: /\.mdx?$/,
+        use: [
+          'babel-loader',
+          'mdx-loader',
+        ]
       },
       {
         test: /\.scss$/,

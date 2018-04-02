@@ -1,12 +1,5 @@
-/**
- * 将 markdown 文件转换为字符串
- */
+import './index.scss';
 
-const loaderUtils = require('loader-utils');
-
-const aliasPattern = null;
-
-const Code = `
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 
@@ -169,31 +162,3 @@ export default class ButtonExample extends Component {
 //   <ButtonExample />,
 //   document.getElementById('j-react-root')
 // );
-
-`
-
-
-
-module.exports = function (content) {
-  this.cacheable && this.cacheable();
-  let options = loaderUtils.getOptions(this);
-
-  /*
-  if (!aliasPattern) {
-    aliasPattern = new RegExp(
-      '(' + Object.keys(options.alias).join('|') + ')\/'
-    );
-  }
-  */
-
-  content = content.replace(/[\r\n]/gi, '\\n');
-  let obj = {
-    markdownContent: content,
-    code: Code
-  }
-
-  // return 'export default "' + content + '";'
-  // return `export default ${JSON.stringify(obj)}`;
-  // return `export default ${Code}`;
-  return Code;
-};
