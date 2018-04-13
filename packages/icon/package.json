@@ -1,9 +1,7 @@
 {
   "main": "dist/index.js",
   "license": "MIT",
-  "devDependencies": {
-    "button": "*"
-  },
-  "name": "header",
+  "devDependencies": {},
+  "name": "-",
   "version": "1.0.0"
 }

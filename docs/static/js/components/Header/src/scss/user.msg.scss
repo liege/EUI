@@ -1,0 +1,90 @@
+$primary: #f83;
+
+.header-user {
+  &-wrapper {
+    width: 270px;
+  }
+  &-info {
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    padding: 26px 0 18px;
+    box-shadow: inset 0 1px 2px 0 rgba(0,0,0,0.04);
+  }
+  &-avatar {
+    display: inline-block;
+    margin-bottom: 2px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    overflow: hidden;
+
+    &, img {
+      height: 60px;
+      width: 60px;
+    }
+  }
+  &-exp span{
+    height: 18px;
+    padding: 0 9px;
+    margin-top: -1px;
+    display: inline-block;
+    color: #fff;
+    background-color: #e6b400;
+    border-radius: 4px;
+  }
+  &-name {
+    width: 210px;
+    padding-top: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+  }
+
+  &-list {
+    padding: 17px 30px;
+    li:nth-child(n + 5) .ic-icon {
+      position: relative;
+      left: -1px;
+    }
+  }
+  &-item {
+    padding: 6px 0;
+    font-size: 14px;
+    color: $primary;
+
+    i.ic-icon {
+      padding-right: 8.5px;
+      color: #bbb;
+      vertical-align: -1px;
+    }
+    a {
+      display: block;
+      color: #333;
+      transition: none;
+    }
+
+    &:hover a{
+      color: $primary;
+    }
+    &:hover .ic-icon {
+      color: $primary
+    }
+
+    &-name {
+      float: left;
+    }
+    &-unit {
+      float: right;
+      color: $primary;
+    }
+  }
+  &-item-hr {
+    margin: 15px 0;
+    width: 100%;
+    height: 1px;
+    background-color: #eee;
+  }
+}

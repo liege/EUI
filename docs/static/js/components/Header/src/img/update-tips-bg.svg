@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="320px" height="100px" viewBox="0 0 320 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>更新提示图片</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="116.159986%" id="linearGradient-1">
+            <stop stop-color="#FFDCCA" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFB69A" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="0%" x2="0.125558036%" y2="99.874442%" id="linearGradient-2">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#B9D2FF" offset="100%"></stop>
+        </linearGradient>
+        <filter x="0.0%" y="0.0%" width="100.0%" height="100.0%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="0" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="0.0%" y="0.0%" width="100.0%" height="100.0%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="0" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <linearGradient x1="50%" y1="-46.4531101%" x2="50%" y2="100%" id="linearGradient-5">
+            <stop stop-color="#FFF0E3" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#E5EBFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="-46.4531101%" x2="50%" y2="100%" id="linearGradient-6">
+            <stop stop-color="#FFF0E3" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#D9E1FF" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-37.5%" y="-37.5%" width="175.0%" height="175.0%" filterUnits="objectBoundingBox" id="filter-7">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-12.5%" y="-10.1%" width="125.0%" height="120.2%" filterUnits="objectBoundingBox" id="filter-8">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <linearGradient x1="50%" y1="113.761719%" x2="50%" y2="4.16333634e-15%" id="linearGradient-9">
+            <stop stop-color="#FF8833" offset="0%"></stop>
+            <stop stop-color="#FFAF64" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-82.7%" y="-75.0%" width="261.5%" height="261.5%" filterUnits="objectBoundingBox" id="filter-10">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="6.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.878431373   0 0 0 0 0.482352941   0 0 0 0 0.223529412  0 0 0 0.84 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-11">
+            <stop stop-color="#FF9B75" offset="0%"></stop>
+            <stop stop-color="#FFD267" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-26.1%" y="-26.1%" width="152.2%" height="152.2%" filterUnits="objectBoundingBox" id="filter-12">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-160.000000, -192.000000)">
+            <g id="Group-4" transform="translate(174.000000, 168.000000)">
+                <circle id="Oval-16" stroke="url(#linearGradient-1)" stroke-width="8" opacity="0.838881341" cx="267" cy="23" r="19"></circle>
+                <rect id="Rectangle-7" stroke="url(#linearGradient-2)" stroke-width="6" filter="url(#filter-3)" transform="translate(200.502809, 50.500000) rotate(24.000000) translate(-200.502809, -50.500000) " x="190.002809" y="40" width="21" height="21" rx="2"></rect>
+                <rect id="Rectangle-7-Copy-2" stroke="#D1E1FF" stroke-width="3" opacity="0.699999988" filter="url(#filter-4)" transform="translate(87.930404, 97.930404) rotate(-18.000000) translate(-87.930404, -97.930404) " x="83.9304043" y="93.9304043" width="8" height="8" rx="2"></rect>
+                <path d="M239.499212,71.9313638 L232.504109,83.7692308 L246.494315,83.7692308 L239.499212,71.9313638 Z" id="Triangle" stroke="url(#linearGradient-5)" stroke-width="4" transform="translate(239.499212, 76.884615) scale(-1, 1) rotate(-48.000000) translate(-239.499212, -76.884615) "></path>
+                <path d="M21.3187573,9.9313638 L7.50410896,33.3099995 L35.1334057,33.3099995 L21.3187573,9.9313638 Z" id="Triangle-Copy" stroke="url(#linearGradient-6)" stroke-width="4" transform="translate(21.318757, 20.655000) scale(-1, 1) rotate(-17.000000) translate(-21.318757, -20.655000) "></path>
+                <circle id="Oval-2" fill="#7373FF" opacity="0.200000003" filter="url(#filter-7)" cx="201" cy="99" r="4"></circle>
+                <path d="M95.3276294,59.8011496 C102.032803,53.4084266 105.327629,48.351684 105.327629,44.8924698 C105.327629,39.3696223 100.850477,34.8924698 95.3276294,34.8924698 C89.8047819,34.8924698 85.3276294,39.3696223 85.3276294,44.8924698 C85.3276294,48.351684 88.6224563,53.4084266 95.3276294,59.8011496 Z" id="Oval-20" stroke="#F58282" stroke-width="4" opacity="0.600000024" filter="url(#filter-8)" transform="translate(95.327629, 47.715999) rotate(-45.000000) translate(-95.327629, -47.715999) "></path>
+                <circle id="Oval-2-Copy-5" fill="url(#linearGradient-9)" cx="146" cy="89" r="30"></circle>
+                <g id="Group-3" filter="url(#filter-10)" transform="translate(133.000000, 76.000000)" fill="#FFFFFF">
+                    <rect id="Rectangle-3" x="0" y="0" width="11.5555556" height="11.5555556" rx="0.722222222"></rect>
+                    <rect id="Rectangle-3-Copy" x="0" y="14.4444444" width="11.5555556" height="11.5555556" rx="0.722222222"></rect>
+                    <rect id="Rectangle-3-Copy-2" x="14.4444444" y="14.4444444" width="11.5555556" height="11.5555556" rx="0.722222222"></rect>
+                    <rect id="Rectangle-3-Copy-3" x="15.8888889" y="1.44444444" width="8.66666667" height="8.66666667" rx="0.722222222"></rect>
+                </g>
+                <circle id="Oval-21" stroke="url(#linearGradient-11)" stroke-width="4" opacity="0.300000012" filter="url(#filter-12)" cx="39.5" cy="64.5" r="9.5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

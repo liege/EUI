@@ -14,6 +14,8 @@ const STATIC_ROOT_DIR = path.resolve(
   __dirname, '../static'
 );
 
+console.log('__dirname----->', __dirname);
+
 const {
   BUILD_ENV,
   BUILD_PROJECT
@@ -55,6 +57,7 @@ module.exports = {
       )
     } 
   },
+  context: __dirname,
   module: {
     rules: [
       // {
@@ -74,13 +77,27 @@ module.exports = {
       //   },
       //   exclude: /node_modules/
       // },
-      // {
+      // {  // 可用
       //   test: /\.md$/,
       //   use: [
       //     'babel-loader',
       //     'markdown-loader'
-      //   ]
+      //   ],
+      //   exclude: /node_modules/
       // },
+      {
+        test: /\.md$/,
+        use: [
+          {
+            loader: 'babel-loader',
+
+          },
+          {
+            loader: 'markdown-loader'
+          }
+        ],
+        exclude: /node_modules/
+      },
       // {
       //   test: /\.md$/, // 可用
       //   use: [
@@ -88,13 +105,6 @@ module.exports = {
       //     'react-markdown-loader'
       //   ]
       // },
-      {
-        test: /\.md$/,
-        use: [
-          'babel-loader',
-          'react-markdown-it-loader'
-        ]
-      },
       {
         test: /\.scss$/,
         use: [
@@ -178,7 +188,7 @@ module.exports = {
         __dirname, '../assets/dll.manifest.json')
       )
     }),
-    
+    new webpack.DefinePlugin({ PACKAGES_PATH: JSON.stringify(path.resolve(__dirname, '../../packages')) }),
     // happypack plugin
     new HappyPack({
       id: 'babel',

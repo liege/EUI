@@ -1,7 +1,7 @@
 ---
 test-front-matter: 'hello world'
 imports:
-  HelloWorld: './hello.js'
+  import HelloWorld from './hello.js'
 ---
 # Hello World
 

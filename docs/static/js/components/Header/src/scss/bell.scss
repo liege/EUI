@@ -1,0 +1,162 @@
+.header-bell {
+  width: 408px;
+  height: 520px;
+  background: #fff;
+  //border: 1px solid #eee;
+  box-shadow: 0 6px 14px 0 rgba(0,0,0,0.06);
+  border-radius: 0 0 4px 4px;
+
+  &-tabs {
+    box-shadow: inset 0 1px 2px 0 rgba(0,0,0,0.04);
+  }
+
+  &-dot {
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -13px;
+      height: 8px;
+      width: 8px;
+      background: #f83;
+      border-radius: 50%;
+    }
+  }
+
+  &-message,
+  &-information {
+    ._empty-component {
+      padding-top: 150px;
+
+      ._empty-cell .ic-empty-msg {
+        padding: 14px 0;
+      }
+    }
+  }
+  // &-information-list,
+  // &-message-list {
+  //   height: 404px;
+  //   margin-bottom: 30px;
+  //   overflow: hidden;
+  //   overflow-y: auto;
+  // }
+
+  &-message-list,
+  &-information-list {
+    font-size: 14px;
+    color: #333;
+    line-height: 22px;
+  }
+
+  &-information-list {
+    padding: 30px 30px 0 40px;
+    span {
+      margin-right: 10px;
+    }
+    a {
+      display: inline-block;
+    }
+    i.icon-retract {
+      vertical-align: -1px;
+    }
+  }
+
+  &-information-item:not(:first-child) {
+    padding-top: 22px;
+  }
+
+  &-message-list {
+    padding: 20px 30px 0 40px;
+  }
+
+  &-message-extra {
+    padding-left: 15px;
+    white-space: nowrap;
+    color: #108ee9;
+    cursor: pointer;
+  }
+
+  &-message-item {
+    position: relative;
+    margin-bottom: 20px;
+
+    &-time {
+      position: absolute;
+      right: 0;
+      top: 0;
+      color: #999;
+      font-size: 14px;
+    }
+
+    .message-title {
+      padding-bottom: 3px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #333;
+    }
+    .message-content {
+      width: 330px;
+    }
+    .message-text {
+      margin-right: 10px;
+    }
+
+    &.unread {
+      &:after {
+        content: '';
+        position: absolute;
+        left: -11px;
+        top: 7px;
+        height: 5px;
+        width: 5px;
+        background-color: #f83;
+        border-radius: 50%;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      display: inline-block;
+      &:hover {
+        color: #108ee9
+      }
+      .icon-retract {
+        vertical-align: -1px;
+      }
+    }
+  }
+
+  &-message-more {
+    text-align: center;
+
+    .ic-btn.ant-btn {
+      font-size: 14px;
+      border-radius: 50px;
+      margin-bottom: 4px;
+    }
+  }
+
+  .ant-tabs-nav {
+    height: 64px;
+    line-height: 50px;
+    font-size: 16px;
+
+    &-scroll {
+      text-align: center;
+    }
+    .ant-tabs-tab {
+      padding: 8px 12px 4px;
+      transition: none;
+    }
+    .ant-tabs-tab-active {
+      font-weight: bold;
+    }
+  }
+  .ant-tabs-bar {
+    margin-bottom: 0;
+  }
+}

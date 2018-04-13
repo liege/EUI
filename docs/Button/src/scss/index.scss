@@ -1,0 +1,192 @@
+$primaryBg: #f83;
+
+// 默认水平方向padding大小
+$defaultHrPadding:27px;
+
+// 大号按钮水平方向padding
+$lgBtnHrPadding: 24px;
+
+// 小号按钮水平方向padding
+$smBtnHrPadding: 12px;
+
+// 迷你按钮水平方向padding
+$miniBtnHrPadding: 12px;
+
+.ic-btn{
+  font-weight: 400;
+  transition: none;
+  &.ant-btn{
+    border-radius: 4px;
+    padding: 0 $defaultHrPadding;
+    line-height: 28px;
+    height: 30px;
+    // font-size: 14px; // UI要求 2018年2月8日14:28:10
+    // letter-spacing: 1px; // 2018年2月8日14:29:28
+    &:hover, &:active {
+      color:$primaryBg;
+      background-color: #fff;
+      border-color: $primaryBg;
+    }
+
+  }
+
+  $primaryBtnHover: #ff9b53;
+  &.ant-btn-primary{
+    background-color: $primaryBg;
+    border-color: $primaryBg;
+
+    &:hover, &:active {
+      color:#fff;
+      background-color: $primaryBtnHover;
+      border-color: $primaryBtnHover;
+    }
+  }
+
+  &.ant-btn-secondary{
+    background-color: #fff;
+    border-color: $primaryBg;
+    color: $primaryBg;
+
+    &:hover, &:active {
+      //background-color: $primaryBg;
+      //color:#fff;
+      opacity:0.7;
+      background-color: #fff;
+      color: #f83;
+    }
+  }
+
+  &.ant-btn-lg{
+    padding: 0 $lgBtnHrPadding;
+    line-height: 32px;
+    height: 34px;
+  }
+
+  &.ant-btn-sm{
+    padding: 0 $smBtnHrPadding;
+    line-height: 28px;
+    height: 30px;
+  }
+
+  &.ant-btn-mini{
+    line-height: 22px;
+    height: 24px;
+    padding: 0 $miniBtnHrPadding;
+    border-radius: 2px;
+  }
+
+  $disabledBg: #f7f7f7;
+  $disabledBorderColor: #d9d9d9;
+  &.ant-btn, .ant-btn-primary, .ant-btn-secondary{
+    &[disabled] {
+      color:#ccc;
+      background-color: $disabledBg;
+      border-color: $disabledBg;
+      cursor: not-allowed;
+
+      &:hover{
+        opacity: 1 !important;
+        color: #ccc;
+        background-color: $disabledBg;
+        border-color: $disabledBg;
+      }
+    }
+  }
+
+
+  &.ant-btn-clicked{
+    &:after{
+      border-color: $primaryBg;
+    }
+  }
+
+  &.ic-btn-fixed-width{
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.ic-btn-group{
+  & > .ant-btn {
+    &:first-child:not(:last-child){
+      padding-right: $defaultHrPadding;
+    }
+
+    &:not(:first-child):not(:last-child){
+      padding-left: $defaultHrPadding;
+      padding-right: $defaultHrPadding;
+    }
+
+    &:last-child:not(:first-child){
+      padding-left: $defaultHrPadding;
+    }
+
+    &.ic-btn.ant-btn.ic-btn-fixed-width{
+      padding-left: 0;
+      padding-right: 0;
+      text-align: center;
+    }
+  }
+
+  & > .ant-btn-lg {
+    &:first-child:not(:last-child){
+      padding-right: $lgBtnHrPadding;
+    }
+
+    &:not(:first-child):not(:last-child){
+      padding-left:$lgBtnHrPadding;
+      padding-right:$lgBtnHrPadding;
+    }
+
+    &:last-child:not(:first-child){
+      padding-left: $lgBtnHrPadding;
+    }
+  }
+
+  & > .ant-btn-sm {
+    &:first-child:not(:last-child){
+      padding-right: $smBtnHrPadding;
+    }
+
+    &:not(:first-child):not(:last-child){
+      padding-left: $smBtnHrPadding;
+      padding-right: $smBtnHrPadding;
+    }
+
+    &:last-child:not(:first-child){
+      padding-left: $smBtnHrPadding;
+    }
+  }
+
+  & > .ant-btn-mini {
+    &:first-child:not(:last-child){
+      padding-right: $miniBtnHrPadding;
+    }
+
+    &:not(:first-child):not(:last-child){
+      padding-left: $miniBtnHrPadding;
+      padding-right: $miniBtnHrPadding;
+    }
+
+    &:last-child:not(:first-child){
+      padding-left: $miniBtnHrPadding;
+    }
+  }
+
+  // 主要按钮在按钮组中左右边框的颜色
+  $primaryInGroupBorderColor: #e67220;
+  & > .ant-btn-primary {
+    &:first-child:not(:last-child){
+      border-right-color: $primaryInGroupBorderColor;
+    }
+
+    &:not(:first-child):not(:last-child){
+      border-left-color: $primaryInGroupBorderColor;
+      border-right-color: $primaryInGroupBorderColor;
+    }
+
+    &:last-child:not(:first-child), & + .ant-btn{
+      border-left-color: $primaryInGroupBorderColor;
+    }
+  }
+}

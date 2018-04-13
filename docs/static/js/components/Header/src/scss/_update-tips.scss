@@ -1,0 +1,28 @@
+._update-tips-dialog{
+  ._ic-dialog-body{
+    background: url(../img/update-tips-bg.svg) center top no-repeat;
+  }
+
+  ._title{
+    font-size: 16px;
+    padding-top: 80px;
+    text-align: center;
+  }
+
+  ._content{
+    width: 420px;
+    max-height: 220px;
+    padding:25px 30px 25px 45px;
+    background-color: #fafafa;
+    margin:26px 0 40px;
+    overflow-y: auto;
+  }
+
+  ._btn-box{
+    text-align: center;
+
+    .ic-btn{
+      border-radius: 28px;
+    }
+  }
+}

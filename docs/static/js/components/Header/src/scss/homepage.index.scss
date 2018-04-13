@@ -1,0 +1,207 @@
+.header{
+  position: relative;
+  z-index: 101;
+  height: 60px;
+}
+.show-bulletin {
+  .homepage-fixed{
+    top: 30px;
+  }
+  .homepage-submenu-fixed{
+    top: 40px !important;
+    &._show-sub{
+      top:90px !important;
+    }
+  }
+}
+.homepage-fixed{
+  position: fixed;
+  top:0;
+  left: 0;
+  width:100%;
+  height: 60px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.04);
+  z-index: 101;
+  //padding-left: calc(100vw - 100%);
+  .homepage-header-inner{
+    width:1180px;
+    margin:0 auto;
+    position: relative;
+  }
+  .homepage-logo{
+    position: absolute;
+    left: 0;
+    padding-top:15px;
+    height: 100%;
+    .ic-logo {
+      display: block;
+    }
+    ._vanke-header-logo{
+      width:64px;
+      margin-top:8px;
+    }
+  }
+  .homepage-nav{
+    padding:0 140px 0 90px;
+  }
+  .homepage-other{
+    position: absolute;
+    right:0;
+    top:18px;
+    .header-toolbar-icon{
+      font-size: 20px;
+      color:#999;
+      cursor: pointer;
+
+      &.icon-search_normal {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .homepage-submenu-fixed{
+    text-align: center;
+    position: fixed;
+    top: 10px;
+    width: 100%;
+    overflow: hidden;
+    height: 0;
+    left: 0;
+    background: #fff;
+    opacity: 0;
+    box-shadow: 0 10px 14px 0 rgba(0,0,0,0.06);
+    transition: all 0.2s;
+    z-index: -1;
+
+    &._show-sub{
+      height: auto;
+      overflow: visible;
+      top:60px;
+      opacity: 1;
+    }
+  }
+  .homepage-submenu-ol{
+    padding: 32px 0;
+    width:1180px;
+    height: 162px;
+    margin:0 auto;
+    position: relative;
+    ._slide-icon{
+      width:30px;
+      height: 12px;
+      background: url(../img/slider-icon.svg);
+      position: absolute;
+      top:-9px;
+      transition: all 0.1s ease;
+    }
+    ._ol-li{
+      display: inline-block;
+      text-align: center;
+      border-right: 1px solid #eee;
+      width:216px;
+      &:last-child{
+        border-right: none
+      }
+      .ic-icon-color{
+        font-size: 40px;
+      }
+      a{
+        display: block;
+      }
+      &:hover{
+        ._name{
+          top: 2px;
+        }
+        .ic-icon-color{
+          top: 4px;
+        }
+      }
+    }
+    ._name{
+      color:#333;
+      line-height: 1;
+      padding:10px 0 16px 0;
+      font-size: 14px;
+      transition:all 0.25s ease;
+      font-weight: 600;
+      position: relative;
+      top:0;
+    }
+    .ic-icon-color{
+      position: relative;
+      top: 0;
+      transition:top 0.25s ease;
+    }
+    ._desc{
+      font-size: 12px;
+      color:#999;
+    }
+  }
+  .homepage-header-ul{
+    height: 60px;
+    ._ul-li{
+      float: left;
+      text-align: center;
+      margin:0 10px;
+      &.active{
+        a{
+          border-bottom: 2px solid #f83;
+          color:#f83;
+        }
+        ._span-icon{
+          color:#f83;
+        }
+      }
+      &.over{
+        ._span-icon{
+          color:#f83;
+          .icon-spread{
+            //transform: rotate(180deg);
+          }
+        }
+      }
+      a, ._span-icon{
+        display: block;
+        padding:0 15px;
+        line-height: 57px;
+        font-size: 14px;
+        color:#333;
+        &:hover{
+          color:#f83;
+        }
+      }
+      ._span-icon{
+        .icon-spread{
+          margin-left: 4px;
+        }
+        &:hover{
+          .icon-spread{
+            //transform: rotate(180deg);
+          }
+        }
+      }
+    }
+    ._li-icon{
+      &:hover{
+        & > .homepage-submenu-ol{
+          display: block;
+        }
+      }
+    }
+    ._span-icon{
+      cursor: pointer;
+    }
+  }
+  .homepage-other {
+    position: absolute;
+    top: 0;
+    right: -22px;
+  }
+}
+
+@import './toolbar';
+@import './user.msg';
+@import './bell';
+@import './update-tips';

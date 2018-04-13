@@ -58,7 +58,7 @@ export default () => {
                 <Menu.Item
                   key={it.name}
                 >
-                  <NavLink
+                  <Link
                     to={`/component/${it.name}`}
                     activeClassName="ant-menu-item-selected"
                   >
@@ -72,7 +72,7 @@ export default () => {
                         {it.label}
                       </span>
                     </span>
-                  </NavLink>
+                  </Link>
                 </Menu.Item>
               );
             })

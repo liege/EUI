@@ -83,7 +83,7 @@ const formatModule = (imports, js, jsx) => {
     //         presets: ['es2015']
     //     })
     //     .code;
-    console.log('========>', moduleText)
+    // console.log('========>', moduleText)
 
     return moduleText;
 };
@@ -177,8 +177,8 @@ module.exports = function (source) {
         .replace(/<hr>/g, '<hr />')
         .replace(/<br>/g, '<br />')
         .replace(/class=/g, 'className=');
-    console.log('imports-------------->', imports)
-    console.log('moduleJS.join-------------->',  moduleJS.join('\n'))
-    console.log('content-------------->', content)
+    // console.log('imports-------------->', imports)
+    // console.log('moduleJS.join-------------->',  moduleJS.join('\n'))
+    // console.log('content-------------->', content)
     return formatModule(imports, moduleJS.join('\n'), content);
 };
