@@ -33,6 +33,8 @@ const PATH_ALIAS = {
   '@packages': path.resolve(__dirname, '../../packages')
 };
 
+console.log('=---------=>', resolve('../'))
+
 module.exports = {
   entry: {
     app: path.resolve(
@@ -60,31 +62,6 @@ module.exports = {
   context: __dirname,
   module: {
     rules: [
-      // {
-      //   test: /\.jsx?$/,
-      //   exclude: /node_modules/,
-      //   use: [
-      //     'babel-loader?presets[]=react,presets[]=es2015'
-      //   ]
-      // },
-      // {
-      //   test: /\README.md$/,
-      //   loader: 'markdown-loader',
-      //   // loaders: ['react-hot', 'babel-loader?presets[]=react,presets[]=es2015', 'markdown-loader'],
-      //   // enforce: 'pre',
-      //   options: {
-      //     alias: PATH_ALIAS
-      //   },
-      //   exclude: /node_modules/
-      // },
-      // {  // 可用
-      //   test: /\.md$/,
-      //   use: [
-      //     'babel-loader',
-      //     'markdown-loader'
-      //   ],
-      //   exclude: /node_modules/
-      // },
       {
         test: /\.md$/,
         use: [
@@ -98,13 +75,6 @@ module.exports = {
         ],
         exclude: /node_modules/
       },
-      // {
-      //   test: /\.md$/, // 可用
-      //   use: [
-      //     'babel-loader',
-      //     'react-markdown-loader'
-      //   ]
-      // },
       {
         test: /\.scss$/,
         use: [
@@ -125,9 +95,9 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        loader: 'happypack/loader?id=babel',
+        loader: 'echo-loader!happypack/loader?id=babel',
         include: [
-          resolve('static')
+          resolve('../')
         ],
         exclude: /(node_modules)|(third-party\/es5)/
       },

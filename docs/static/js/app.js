@@ -60,7 +60,7 @@ export default () => {
                 >
                   <Link
                     to={`/component/${it.name}`}
-                    activeClassName="ant-menu-item-selected"
+                    // activeClassName="ant-menu-item-selected" // 导致Warning
                   >
                     <span
                       className={style['nav-text']}
