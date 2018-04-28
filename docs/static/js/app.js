@@ -1,4 +1,4 @@
-import style from '../scss/index.scss';
+import '../scss/index.scss';
 
 import React, { Component } from 'react';
 import { upperFirst } from 'lodash';
@@ -23,7 +23,7 @@ export default () => {
         }}
       >
         <div
-          className={style.logo}
+          className="logo"
         >
           <Link to="/">EUI</Link>
         </div>
@@ -41,7 +41,7 @@ export default () => {
               activeClassName="ant-menu-item-selected"
             >
               <span
-                className={style['nav-text']}
+                className="nav-text"
               >
                 首页
               </span>
@@ -63,11 +63,11 @@ export default () => {
                     // activeClassName="ant-menu-item-selected" // 导致Warning
                   >
                     <span
-                      className={style['nav-text']}
+                      className="nav-text"
                     >
                       {upperFirst(it.name)}
                       <span
-                        className={style['component']}
+                        className="component"
                       >
                         {it.label}
                       </span>
@@ -88,7 +88,7 @@ export default () => {
         }}
       >
         <Content>
-          <div className={style['content-wrap']}>
+          <div className="content-wrap">
             <Switch>
               <Route
                 path="/"

@@ -1,3 +1,4 @@
+import '../../scss/markdown.scss';
 import React, { Component } from 'react';
 
 var path = require('path');
@@ -48,7 +49,6 @@ export default class EuiComponent extends Component {
     let Readme = this.state.README;
     return (
       <div>
-        <h1>{this.state.component} 组件API</h1>
           {
             Readme ? <Readme/> : null
           }

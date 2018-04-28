@@ -81,8 +81,7 @@ module.exports = {
           'style-loader', {
             loader: 'css-loader',
             options: {
-              sourceMap: false,
-              modules: true
+              sourceMap: false
             }
           }, {
             loader: 'sass-loader',
